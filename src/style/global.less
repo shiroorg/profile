@@ -1,0 +1,22 @@
+.ts-1 {
+  transition: 1s;
+}
+.ts-2 {
+  transition: 2s;
+}
+.ts-3 {
+  transition: 3s;
+}
+
+each(range(1px, 30px, 1), {
+
+  .translate-X@{index} {
+    transform: translateX((~"@{index}px"));
+  }
+
+  .translate-Y@{index} {
+    transform: translateY((~"@{index}px"));
+  }
+
+});
+
