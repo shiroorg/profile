@@ -5,7 +5,7 @@
   background: white;
   height: 80px;
   width: 80px;
-  position: absolute;
+  //position: absolute;
   z-index: 10;
 
   img{
@@ -13,18 +13,87 @@
     height: 100%;
   }
 
+  &.shadow-block[data-shadow="true"]:last-child(2n) {
+    box-shadow: 6px 6px 6px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 6px 6px 6px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 6px 6px 6px 0 rgba(0,0,0,0.5);
+  }
+  &.shadow-block[data-shadow="false"]:last-child(2n) {
+    box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.5);
+  }
+
+  &.shadow-block[data-shadow="true"] {
+    box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.5);
+  }
+  &.shadow-block[data-shadow="false"] {
+    box-shadow: 6px 6px 6px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 6px 6px 6px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 6px 6px 6px 0 rgba(0,0,0,0.5);
+  }
 }
 
-.skyblock.shadow[data-shadow="true"] {
-  box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.5);
-  -webkit-box-shadow: 11px 10px 5px 0 rgba(0,0,0,0.5);
-  -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.5);
-}
 
-.skyblock.shadow[data-shadow="false"] {
-  box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
-  -webkit-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
-  -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.5);
-}
+.container {
 
+  .skyblock {
+    margin-top: 5px;
+  }
+
+  &.tick-position-1 {
+    .skyblock{
+      &[data-block='php'] {
+        transform: translate(85px, 0);
+      }
+      &[data-block='html'] {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  &.tick-position-2 {
+    .skyblock{
+      &[data-block='php'] {
+        transform: translate(0, 0);
+      }
+      &[data-block='html'] {
+        transform: translate(85px, 0);
+      }
+    }
+  }
+
+  &.tick-position-3 {
+    .skyblock{
+      &[data-block='php'] {
+        transform: translate(0, -85px);
+      }
+      &[data-block='html'] {
+        transform: translate(85px, 85px);
+      }
+    }
+  }
+
+  &.tick-position-4 {
+    .skyblock {
+      &[data-block='php'] {
+        transform: translate(0, 0px);
+      }
+      &[data-block='html'] {
+        transform: translate(85px, 0);
+      }
+    }
+  }
+
+  &.tick-position-5 {
+    .skyblock {
+      &[data-block='php'] {
+        transform: translate(0, 0px);
+      }
+    }
+  }
+
+}
 

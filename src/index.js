@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import SkyBlock from './modules/SkyBlock';
 
+import logoPhp from './image/php.png';
 import logoHtml from './image/html5.png';
 
 // import reportWebVitals from './reportWebVitals';
@@ -16,29 +17,34 @@ function tickShadow() {
 
     root.render(
         <React.StrictMode>
-            <SkyBlock logo={logoHtml} shadow={shadowStatus}/>
+            <div className="container tick-position-1">
+                <div className="row mt-3">
+                    <div className="col-12 col-lg-12">
+                        <SkyBlock logo={logoHtml} shadow={shadowStatus} block="html"/>
+                    </div>
+                    <div className="col-12 col-lg-12">
+                        <SkyBlock logo={logoPhp} shadow={shadowStatus} block="php"/>
+                    </div>
+                </div>
+            </div>
         </React.StrictMode>
     );
 }
 
-function tickPositionX() {
-    window.tickPositionX = (window.tickPositionX === 1 ? 30 : 1);
-    updateTick();
-}
-function tickPositionY() {
-    window.tickPositionY = (window.tickPositionY === 1 ? 15 : 1);
-    updateTick();
-}
-
-
 function updateTick() {
-    document.getElementsByClassName('skyblock')[0].className = 'skyblock shadow ts-3 translate-X'+window.tickPositionX + ' translate-Y'+window.tickPositionY;
+
+    if(window.tickPosition > 5) {
+        window.tickPosition = 1;
+    }
+
+    document.getElementsByClassName('container')[0].className = 'container tick-position-'+window.tickPosition;
+
+    window.tickPosition++;
 }
 
-window.tickPositionX = 1;
-window.tickPositionY = 1;
+window.tickPosition = 1;
 setInterval(tickShadow, 1500);
-setInterval(tickPositionX, 3333);
+setInterval(updateTick, 3333);
 // setInterval(tickPositionY, 1000);
 
 // If you want to start measuring performance in your app, pass a function

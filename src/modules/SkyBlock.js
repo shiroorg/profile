@@ -20,7 +20,7 @@ class SkyBlock extends React.Component {
 
     render() {
         return (
-            <div className="skyblock shadow ts-3" data-type="skyblock" data-shadow={this.props.shadow}>
+            <div className="skyblock shadow-block ts-3" data-type="skyblock" data-shadow={this.props.shadow} data-block={this.props.block}>
                 <img src={this.props.logo} className="block-logo" alt="logo"/>
             </div>
         );
