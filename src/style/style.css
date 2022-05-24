@@ -1,5 +1,9 @@
 body {
-  background: #a561e1;
+  background-size: cover;
+  height: 100vh;
+  display: block;
+  background: #eb5ffe;
+  background: linear-gradient(179deg, #eb5ffe 0%, #699ed3 99%);
 }
 .ts-1 {
   transition: 1s;
@@ -231,11 +235,17 @@ body {
 .container.tick-position-1 .skyblock[data-block='html'] {
   transform: translate(0, 0);
 }
+.container.tick-position-1 .skyblock[data-block='js'] {
+  transform: translate(-85px, 0);
+}
 .container.tick-position-2 .skyblock[data-block='php'] {
   transform: translate(0, 0);
 }
 .container.tick-position-2 .skyblock[data-block='html'] {
   transform: translate(85px, 0);
+}
+.container.tick-position-2 .skyblock[data-block='js'] {
+  transform: translate(0, 0);
 }
 .container.tick-position-3 .skyblock[data-block='php'] {
   transform: translate(0, -85px);
@@ -243,13 +253,28 @@ body {
 .container.tick-position-3 .skyblock[data-block='html'] {
   transform: translate(85px, 85px);
 }
+.container.tick-position-3 .skyblock[data-block='js'] {
+  transform: translate(0, -85px);
+}
 .container.tick-position-4 .skyblock[data-block='php'] {
   transform: translate(0, 0px);
 }
 .container.tick-position-4 .skyblock[data-block='html'] {
   transform: translate(85px, 0);
 }
+.container.tick-position-4 .skyblock[data-block='js'] {
+  transform: translate(0, 0);
+}
 .container.tick-position-5 .skyblock[data-block='php'] {
   transform: translate(0, 0px);
+}
+.profile {
+  color: whitesmoke;
+}
+.profile h2,
+.profile h4,
+.profile h5 {
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

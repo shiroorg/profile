@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import SkyBlock from './modules/SkyBlock';
 
+import logoJs from './image/js.jpg';
 import logoPhp from './image/php.png';
 import logoHtml from './image/html5.png';
 
@@ -18,12 +19,26 @@ function tickShadow() {
     root.render(
         <React.StrictMode>
             <div className="container tick-position-1">
-                <div className="row mt-3">
-                    <div className="col-12 col-lg-12">
-                        <SkyBlock logo={logoHtml} shadow={shadowStatus} block="html"/>
+                <div className="row">
+                    <div className="col-12 col-lg-6 mt-3">
+
                     </div>
-                    <div className="col-12 col-lg-12">
-                        <SkyBlock logo={logoPhp} shadow={shadowStatus} block="php"/>
+                    <div className="col-12 col-lg-6 mt-3">
+                        <div className="col-12 col-lg-12">
+                            <SkyBlock logo={logoHtml} shadow={shadowStatus} block="html"/>
+                        </div>
+                        <div className="col-12 col-lg-12">
+                            <SkyBlock logo={logoPhp} shadow={shadowStatus} block="php"/>
+                        </div>
+                        <div className="col-12 col-lg-12">
+                            <SkyBlock logo={logoJs} shadow={shadowStatus} block="js"/>
+                        </div>
+                    </div>
+                    <div className="profile col-12 col-lg-6 mt-3">
+                        <div className="mt-5 pt-5">
+                            <h2>Dmitry Kremezion</h2>
+                            <h5>WEB Developer</h5>
+                        </div>
                     </div>
                 </div>
             </div>
