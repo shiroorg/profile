@@ -194,6 +194,12 @@ body {
 .translate-Y30 {
   transform: translateY(30px);
 }
+@media (max-width: 900px) {
+  .skyblock {
+    height: 40px;
+    width: 40px;
+  }
+}
 .skyblock {
   border-radius: 5px;
   padding: 5px;
@@ -268,13 +274,16 @@ body {
 .container.tick-position-5 .skyblock[data-block='php'] {
   transform: translate(0, 0px);
 }
-.profile {
+#page-profile {
   color: whitesmoke;
 }
-.profile h2,
-.profile h4,
-.profile h5 {
+#page-profile .profile h2,
+#page-profile .profile h4,
+#page-profile .profile h6 {
   margin-bottom: 0;
   text-transform: uppercase;
+}
+#page-profile .profile h6 {
+  font-size: 0.8rem;
 }
 /*# sourceMappingURL=style.css.map */
