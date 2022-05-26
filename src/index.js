@@ -46,6 +46,7 @@ function tickShadow() {
                             I have been a PHP developer since 2013. I have been working on server programming (big data, cluster programming, high load). From 2015 i have been working on a back-end development for mobile app. I have also been working on design for the mobile app
                         </p>
                     </div>
+
                 </div>
             </div>
         </React.StrictMode>
