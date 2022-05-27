@@ -5,6 +5,17 @@ body {
   background: #eb5ffe;
   background: linear-gradient(179deg, #eb5ffe 0%, #699ed3 99%);
 }
+body #root {
+  height: 100vh;
+  display: block;
+}
+body #root .container {
+  text-align: center;
+  color: white;
+}
+body #root .col-6.col-lg-2 {
+  margin: auto;
+}
 .ts-1 {
   transition: 1s;
 }
@@ -201,6 +212,7 @@ body {
   }
 }
 .skyblock {
+  cursor: pointer;
   border-radius: 5px;
   padding: 5px;
   background: white;
