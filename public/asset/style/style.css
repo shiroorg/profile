@@ -1,12 +1,11 @@
 body {
   background-size: cover;
-  height: 100vh;
   display: block;
   background: #eb5ffe;
   background: linear-gradient(179deg, #eb5ffe 0%, #699ed3 99%);
 }
 body #root {
-  height: 100vh;
+  height: 100%;
   display: block;
 }
 body #root .container {
@@ -292,10 +291,39 @@ body #root .col-6.col-lg-2 {
 #page-profile .profile h2,
 #page-profile .profile h4,
 #page-profile .profile h6 {
+  text-align: center;
   margin-bottom: 0;
+  color: #232222;
   text-transform: uppercase;
 }
 #page-profile .profile h6 {
   font-size: 0.8rem;
+}
+#page-profile .white-block {
+  background: white;
+  color: #4b4a4a;
+  text-align: left;
+  border-radius: 5px;
+  border: 2px solid #b5b5b566;
+  -webkit-box-shadow: 4px 4px 2px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 2px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 2px 0px rgba(34, 60, 80, 0.2);
+}
+#page-profile .white-block .center {
+  text-align: center;
+}
+#page-profile .white-block ul {
+  padding-left: 0;
+}
+#page-profile .white-block ul li {
+  list-style: none;
+}
+#page-profile .white-block ul li a {
+  text-decoration: none;
+  color: #232222;
+}
+#page-profile .white-block ul li img {
+  padding-right: 5px;
+  width: 35px;
 }
 /*# sourceMappingURL=style.css.map */
